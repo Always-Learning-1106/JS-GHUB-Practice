@@ -25,7 +25,7 @@
 
 //dont forget to add default
 // }
-
+/*
 let converter = function convert(x) {
   switch (typeof x) {
     case "number":
@@ -78,3 +78,17 @@ const adding = a.reduce((acc, b) => (acc += b));
 // console.log(adding);
 const timeTwo = a.map((v) => v * 2);
 // console.log(timeTwo);
+*/
+
+function printArray(a) {
+  let len = a.length,
+    i = 0;
+  if (len === 0) {
+    console.log("Empty Array");
+  } else {
+    do {
+      console.log(a[i]);
+    } while (++i < len);
+  }
+}
+printArray(["a", 2, 5, 6, 7, 8]);
