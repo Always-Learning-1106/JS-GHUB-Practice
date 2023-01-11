@@ -135,6 +135,8 @@ for (let letter of "mississippi") {
 }
 // console.log(frequency);
 */
+
+/*
 let text = "Na na na na na na na na Batman!";
 let wordSet = new Set(text.split(" "));
 console.log(wordSet);
@@ -153,4 +155,14 @@ async function printStream(stream) {
   for await (let chunk of stream) {
     console.log(chunk);
   }
+}
+*/
+let o = { x: 1, y: 2, z: 3 };
+let a = [],
+  i = 0;
+for (a[i++] in o);
+console.log(a);
+
+for (let i in a) {
+  console.log(i);
 }
