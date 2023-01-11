@@ -168,6 +168,8 @@ for (let i in a) {
   console.log(i);
 }
 */
+
+/*
 //Closures
 const first = () => {
   const greet = "Hi";
@@ -192,3 +194,24 @@ obj1.a = 30;
 obj1.b = 100;
 obj2.b = 30;
 obj2.a = 100;
+*/
+
+//call stack + memory heap
+const number = 610; // allocate memory for number
+const string = "some text"; // allocate memory for a string
+const human = {
+  // allocate memory for an object ans it's values.
+  first: "john",
+  last: "smith",
+};
+// JS engine takes control of where each variable is stored
+function subtractTwo(number) {
+  return number - 2;
+}
+function calculate() {
+  const sumTotal = 5 + 6;
+  ``;
+  return subtractTwo(sumTotal);
+}
+// calculate(); // first in last out call stack progression
+//calculate will be pushed to the top of the stack and run whatever it does. After it runs it will be removed from the stack but remains in memory heap
