@@ -66,4 +66,15 @@ let reducedArrOfObj = arrOfObj.reduce((acc, obj) => {
   acc += obj[key];
   return acc;
 }, 0);
-console.log(reducedArrOfObj);
+// console.log(reducedArrOfObj);
+const arrOfObj2 = [
+  { a: 0, b: 2 },
+  { a: 6, b: 1 },
+  { a: 9, c: 2 },
+];
+// console.log(arrOfObj2[2]["a"]);
+const a = [12, 3, 45, 67];
+const adding = a.reduce((acc, b) => (acc += b));
+// console.log(adding);
+const timeTwo = a.map((v) => v * 2);
+// console.log(timeTwo);
