@@ -157,11 +157,12 @@ async function printStream(stream) {
   }
 }
 */
+
 let o = { x: 1, y: 2, z: 3 };
 let a = [],
   i = 0;
 for (a[i++] in o);
-console.log(a);
+console.log(a); ////output = ['x', 'y', 'z']
 
 for (let i in a) {
   console.log(i);
