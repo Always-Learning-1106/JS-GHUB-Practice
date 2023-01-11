@@ -91,4 +91,25 @@ function printArray(a) {
     } while (++i < len);
   }
 }
-printArray(["a", 2, 5, 6, 7, 8]);
+// // printArray(["a", 2, 5, 6, 7, 8]);
+// function tail(o) {
+//   for (; o.next; o = o.next) {
+//     return o;
+//   }
+// }
+// console.log(tail({ a: 1, b: 2 }));
+const mySet = new Set();
+mySet.add(1);
+mySet.add(2);
+// console.log(mySet.has(2));
+const myMap = new Map();
+myMap.set("name", "John");
+myMap.set("age", 30);
+// console.log(myMap);
+
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  sum = 0;
+for (let element of data) {
+  sum += element;
+}
+console.log(sum);
