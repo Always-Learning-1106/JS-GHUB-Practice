@@ -9,8 +9,18 @@ main {
   background-repeat: no-repeat;
   height: 100vh;
   background-position: top;
+  position: relative;
 }
 
 h1 {
-  color: #777;
+  position: absolute;
+  color: rgb(156, 156, 156);
+  background-color: rgb(3, 4, 3);
+  width: 35%;
+  top: 40px;
+  left: 30px;
+  border-radius: 50px;
+  border-bottom: 100px white;
+  padding: 10px;
+  border-bottom: solid white;
 }

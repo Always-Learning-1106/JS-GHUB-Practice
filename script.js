@@ -112,4 +112,23 @@ let data = [1, 2, 3, 4, 5, 6, 7, 8, 9],
 for (let element of data) {
   sum += element;
 }
-console.log(sum);
+// console.log(sum);
+let o = { x: 1, y: 2, z: 3 };
+let values = 0;
+let keys = "";
+for (let [k, v] of Object.entries(o)) {
+  values += v;
+  keys += k;
+}
+// console.log(keys);
+// console.log(values);
+let frequency = {};
+for (let letter of "mississippi") {
+  if (frequency[letter]) {
+    frequency[letter]++;
+  } else {
+    frequency[letter] = 1;
+  }
+  // debugger;
+}
+console.log(frequency);
