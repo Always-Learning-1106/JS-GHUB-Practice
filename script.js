@@ -55,3 +55,15 @@ const strings = ["aa", "bbb", "c", "dddd", "eeeeeeeeeeee", "fff", "ggggg"];
 const longestString = strings.map((string) => string.length);
 
 // console.log(longestString);
+
+const arrOfObj = [
+  { a: 0, b: 2 },
+  { a: 6, b: 1 },
+  { a: 9, c: 2 },
+];
+const key = "a";
+let reducedArrOfObj = arrOfObj.reduce((acc, obj) => {
+  acc += obj[key];
+  return acc;
+}, 0);
+console.log(reducedArrOfObj);
