@@ -37,4 +37,21 @@ let converter = function convert(x) {
       return `x has a boolean value of ${!!x}`;
   }
 };
-console.log(converter("false"));
+// console.log(converter("false"));
+const arrayPractice = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evens = arrayPractice.filter((number) => number % 2 === 0);
+
+// console.log(evens);
+
+let squared = arrayPractice.map((x) => x ** 2);
+// console.log(squared);
+
+let addOneToEachArrayEl = arrayPractice.map((v, i, a) => {
+  return (a[i] = v + 1);
+});
+
+// console.log(addOneToEachArrayEl);
+const strings = ["aa", "bbb", "c", "dddd", "eeeeeeeeeeee", "fff", "ggggg"];
+const longestString = strings.map((string) => string.length);
+
+// console.log(longestString);

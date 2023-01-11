@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 main {
-  background-image: url("./images/pexels-pixabay-33045.jpg");
+  background-image: url("./imgs/pexels-pixabay-33045.jpg");
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   height: 100vh;
+  background-position: top;
 }
 
 h1 {
