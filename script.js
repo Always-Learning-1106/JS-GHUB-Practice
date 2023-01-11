@@ -79,7 +79,7 @@ const adding = a.reduce((acc, b) => (acc += b));
 const timeTwo = a.map((v) => v * 2);
 // console.log(timeTwo);
 */
-
+/*
 function printArray(a) {
   let len = a.length,
     i = 0;
@@ -91,12 +91,14 @@ function printArray(a) {
     } while (++i < len);
   }
 }
+*/
 // // printArray(["a", 2, 5, 6, 7, 8]);
 // function tail(o) {
 //   for (; o.next; o = o.next) {
 //     return o;
 //   }
 // }
+/*
 // console.log(tail({ a: 1, b: 2 }));
 const mySet = new Set();
 mySet.add(1);
@@ -131,4 +133,24 @@ for (let letter of "mississippi") {
   }
   // debugger;
 }
-console.log(frequency);
+// console.log(frequency);
+*/
+let text = "Na na na na na na na na Batman!";
+let wordSet = new Set(text.split(" "));
+console.log(wordSet);
+let unique = [];
+for (let word of wordSet) {
+  unique.push(word);
+}
+console.log(unique);
+let m = new Map([[1, "one"]]);
+console.log(m);
+for (let [k, v] of m) {
+  console.log(k);
+  console.log(v);
+}
+async function printStream(stream) {
+  for await (let chunk of stream) {
+    console.log(chunk);
+  }
+}
