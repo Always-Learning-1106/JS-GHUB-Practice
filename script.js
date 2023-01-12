@@ -236,7 +236,7 @@ function calculate() {
 //   }
 // }
 // throwDice();
-
+/*
 //USING ...args and built in arguments()
 function sumAndAvg(...args) {
   let total = 0;
@@ -258,3 +258,22 @@ function sumAndAvg() {
 }
 
 console.log(sumAndAvg(10, 10, 10));
+*/
+// function greet(nickname) {
+//   console.log(`Hi, ${nickname}!`);
+// }
+// greet("Glenn");
+
+// let roll = Math.floor(Math.random() + 1);
+
+const diceRoll = (numberOfRolls = 0) => {
+  let collectedRolls = [];
+  for (i = 0; i < numberOfRolls; i++) {
+    let rollDice = Math.floor(Math.random() * 6) + 1;
+    collectedRolls.push(rollDice);
+  }
+  return collectedRolls;
+};
+// console.log(diceRoll(7));
+
+console.log(diceRoll(8));
