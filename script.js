@@ -195,7 +195,7 @@ obj1.b = 100;
 obj2.b = 30;
 obj2.a = 100;
 */
-
+/*
 //call stack + memory heap
 const number = 610; // allocate memory for number
 const string = "some text"; // allocate memory for a string
@@ -215,3 +215,24 @@ function calculate() {
 }
 // calculate(); // first in last out call stack progression
 //calculate will be pushed to the top of the stack and run whatever it does. After it runs it will be removed from the stack but remains in memory heap
+*/
+
+// function funcName() {
+//   console.log("ugh...you again...");
+//   console.log("for the last time..");
+//   console.log("leave me alone".toUpperCase());
+// }
+// console.log(funcName());
+
+// iterating and Math usage
+function rollDie() {
+  let roll = Math.floor(Math.random() * 6) + 1;
+  console.log(`Rolled ${roll}`);
+}
+
+function throwDice(count = 6) {
+  for (i = 0; i < count; i++) {
+    rollDie();
+  }
+}
+throwDice();
