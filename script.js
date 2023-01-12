@@ -364,5 +364,17 @@ console.log(appleJuice);
 
 const str = "Where is waldo?";
 
-const strReversed = str.split("").reverse().join("", "");
+const strReversed = str.split("").reverse().join("", "@email.com");
 console.log(strReversed);
+let originalText = "This is an example of text replacement";
+
+// Split the text into a list of substrings using space as the delimiter
+let textList = originalText.split(" ");
+
+// Replace the second substring with the new text
+textList[textList.length - 1] = "editing";
+
+// Use the join method to concatenate the substrings with space as the separator
+let newText = textList.join(" ");
+
+console.log(newText);
