@@ -1,3 +1,4 @@
+"use strict";
 // function trying(a) {
 //   let b = a + 2;
 //   return b;
@@ -287,6 +288,7 @@ console.log(collectedRolls);
 //   return x / y;
 // }
 // console.log(divide(5, 100));
+/*
 let validation;
 const isValid = (username, password) => {
   if (typeof username === "string" && typeof password === "string") {
@@ -299,7 +301,7 @@ const isValid = (username, password) => {
   }
   return validation;
 };
-
+*/
 // console.log(isValid("3213532f", "3213532f"));
 
 //Recursion*************************
@@ -345,3 +347,22 @@ console.log(4);
 //The function values are stored in the call stack while a recursive function is being called. Each time the function is called, a new frame is added to the stack with the current function's values, and each time the function returns, the top frame is removed from the stack. This process continues until the base case is reached, at which point the function values are no longer stored in the call stack.
 //the call stack returns the values: it is LIFO (Last In First Out) data structure, which means the last function call that was added to the stack is the first one to be removed.
 // Each time a function is called, a new frame is added to the top of the call stack, and each time a function returns, the top frame is removed from the stack. So it works in a way that the last function call that was added to the stack is the first one to be removed.
+
+function logger() {
+  console.log("My name is Tim");
+}
+// calling, running, or invoking all mean same thing
+logger();
+
+function fruitProcessor(apples, oranges) {
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice;
+}
+
+const appleJuice = fruitProcessor(6, 3);
+console.log(appleJuice);
+
+const str = "Where is waldo?";
+
+const strReversed = str.split("").reverse().join("", "");
+console.log(strReversed);
