@@ -303,6 +303,7 @@ const isValid = (username, password) => {
 // console.log(isValid("3213532f", "3213532f"));
 
 //Recursion*************************
+/*
 function factorial(n) {
   if (n === 0) {
     return 1;
@@ -322,3 +323,25 @@ function findValue(arr, value, index) {
   }
 }
 console.log(findValue([1, 2, 3, 4, 5], 3, 0)); // Output: 2
+*/
+/*
+function reverseString(str) {
+  return str === "" ? "" : reverseString(str.substr(1)) + str.charAt(0);
+}
+// debugger;
+console.log(reverseString("I am a butterfly"));
+console.log(4);
+*/
+
+// let test = function factorial(n) {
+//   if (n <= 1) {
+//     return 1;
+//   }
+//   return n * factorial(n - 1);
+// };
+
+// console.log(test(10));
+// debugger;
+//The function values are stored in the call stack while a recursive function is being called. Each time the function is called, a new frame is added to the stack with the current function's values, and each time the function returns, the top frame is removed from the stack. This process continues until the base case is reached, at which point the function values are no longer stored in the call stack.
+//the call stack returns the values: it is LIFO (Last In First Out) data structure, which means the last function call that was added to the stack is the first one to be removed.
+// Each time a function is called, a new frame is added to the top of the call stack, and each time a function returns, the top frame is removed from the stack. So it works in a way that the last function call that was added to the stack is the first one to be removed.
