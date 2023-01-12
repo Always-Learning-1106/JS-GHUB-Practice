@@ -300,4 +300,25 @@ const isValid = (username, password) => {
   return validation;
 };
 
-console.log(isValid("1", "3213532f"));
+// console.log(isValid("3213532f", "3213532f"));
+
+//Recursion*************************
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log(factorial(5)); // Output: 120
+
+function findValue(arr, value, index) {
+  if (index === arr.length) {
+    return -1;
+  } else if (arr[index] === value) {
+    return index;
+  } else {
+    return findValue(arr, value, index + 1);
+  }
+}
+console.log(findValue([1, 2, 3, 4, 5], 3, 0)); // Output: 2
