@@ -265,9 +265,9 @@ console.log(sumAndAvg(10, 10, 10));
 // greet("Glenn");
 
 // let roll = Math.floor(Math.random() + 1);
-
+/*
+let collectedRolls = [];
 const diceRoll = (numberOfRolls = 0) => {
-  let collectedRolls = [];
   for (i = 0; i < numberOfRolls; i++) {
     let rollDice = Math.floor(Math.random() * 6) + 1;
     collectedRolls.push(rollDice);
@@ -276,4 +276,28 @@ const diceRoll = (numberOfRolls = 0) => {
 };
 // console.log(diceRoll(7));
 
-console.log(diceRoll(8));
+diceRoll(1);
+
+console.log(collectedRolls);
+*/
+// let square = (num = 0) => num * num;
+// console.log(square());
+
+// function divide(x = 0, y = 1) {
+//   return x / y;
+// }
+// console.log(divide(5, 100));
+let validation;
+const isValid = (username, password) => {
+  if (typeof username === "string" && typeof password === "string") {
+    validation =
+      password.length <= 7 || password.includes(" ") || username === password
+        ? false
+        : true;
+  } else {
+    validation = `Please enter username and password as a string. Make sure password is at least 8 characters long, has no spaces, and is not the same as the userName`;
+  }
+  return validation;
+};
+
+console.log(isValid("1", "3213532f"));
