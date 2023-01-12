@@ -225,14 +225,36 @@ function calculate() {
 // console.log(funcName());
 
 // iterating and Math usage
-function rollDie() {
-  let roll = Math.floor(Math.random() * 6) + 1;
-  console.log(`Rolled ${roll}`);
+// function rollDie() {
+//   let roll = Math.floor(Math.random() * 6) + 1;
+//   console.log(`Rolled ${roll}`);
+// }
+
+// function throwDice(count = 6) {
+//   for (i = 0; i < count; i++) {
+//     rollDie();
+//   }
+// }
+// throwDice();
+
+//USING ...args and built in arguments()
+function sumAndAvg(...args) {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  let average = total / args.length;
+  return { sum: total, average: average };
+}
+console.log(sumAndAvg(3, 4, 5, 6, 89, 3));
+
+function sumAndAvg() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  let average = total / arguments.length;
+  return { sum: total, average: average };
 }
 
-function throwDice(count = 6) {
-  for (i = 0; i < count; i++) {
-    rollDie();
-  }
-}
-throwDice();
+console.log(sumAndAvg(10, 10, 10));
