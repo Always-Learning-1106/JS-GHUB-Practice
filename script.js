@@ -432,12 +432,14 @@ const getFullYear = function () {
 const getAge = function (birthYear) {
   return getFullYear() - birthYear;
 };
-const desiredRetirementAge = function (getAge, retirmentAge) {
-  return retirmentAge - getAge;
+const getRetirementAge = function (age) {
+  return age;
 };
-const yearsUntilRetirement = (birthYear, retirementAge) => {
-  const retiring = desiredRetirementAge(getAge(birthYear), retirementAge);
-  return retiring;
+const desiredRetirementAge = function (getAge, getRetirementAge) {
+  return getRetirementAge - getAge;
 };
-const yearsOfWorkLeft = yearsUntilRetirement(getAge(40), 100);
+const yearsUntilRetirement = (birthYear, getRetirementAge) => {
+  return desiredRetirementAge(getAge(birthYear), getRetirementAge);
+};
+const yearsOfWorkLeft = yearsUntilRetirement(getAge(40), getRetirementAge(100));
 console.log(yearsOfWorkLeft);
