@@ -411,7 +411,7 @@ const yearsUntilRetirement = (birthYear, retirementAge) => {
 const yearsOfWorkLeft = yearsUntilRetirement(1983, 58);
 console.log(yearsOfWorkLeft);
 */
-
+/*
 function cutFruitPieces(fruit) {
   return fruit * 4;
 }
@@ -436,8 +436,31 @@ const desiredRetirementAgeAndYearBorn = function (getRetirementAge, age) {
   return getRetirementAge - getAge(age);
 };
 const lisaRetirement = desiredRetirementAgeAndYearBorn(98, 1983);
-const glennRetirement = desiredRetirementAgeAndYearBorn(41, 1983);
+const glennRetirement = desiredRetirementAgeAndYearBorn(45, 1983);
 console.log(lisaRetirement);
 console.log(glennRetirement);
 // const yearsOfWorkLeft = yearsUntilRetirement(getAge(37), getRetirementAge(90));
 // console.log(yearsOfWorkLeft);
+*/
+const dolphins = [44, 23, 71];
+const koalas = [65, 54, 49];
+// const dolphins = [85, 54, 41];
+// const koalas = [23, 34, 27];
+
+const calcAvg = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+
+const checkWinner = function () {
+  const dolphinAvg = calcAvg(dolphins[0], dolphins[1], dolphins[2]);
+  const koalaAvg = calcAvg(koalas[0], koalas[1], koalas[2]);
+  if (dolphinAvg / 2 >= koalaAvg) {
+    return `The Dolphins win with a score of ${dolphinAvg} to the Koalas ${koalaAvg}`;
+  } else if (koalaAvg / 2 >= dolphinAvg) {
+    return `The Koalas win with a score of ${koalaAvg} to the Dolphins ${dolphinAvg}`;
+  } else {
+    return `No one wins`;
+  }
+};
+console.log(checkWinner());
+// in order for a team to win their average score must double their opponents average score
