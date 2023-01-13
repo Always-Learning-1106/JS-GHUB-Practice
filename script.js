@@ -347,7 +347,7 @@ console.log(4);
 //The function values are stored in the call stack while a recursive function is being called. Each time the function is called, a new frame is added to the stack with the current function's values, and each time the function returns, the top frame is removed from the stack. This process continues until the base case is reached, at which point the function values are no longer stored in the call stack.
 //the call stack returns the values: it is LIFO (Last In First Out) data structure, which means the last function call that was added to the stack is the first one to be removed.
 // Each time a function is called, a new frame is added to the top of the call stack, and each time a function returns, the top frame is removed from the stack. So it works in a way that the last function call that was added to the stack is the first one to be removed.
-
+/*
 function logger() {
   console.log("My name is Tim");
 }
@@ -378,3 +378,21 @@ textList[textList.length - 1] = "editing";
 let newText = textList.join(" ");
 
 console.log(newText);
+*/
+
+// function declaration
+function calcAge1(birthYear) {
+  const extractingYear = new Date();
+  const year = extractingYear.getFullYear();
+  return year - birthYear;
+}
+
+const age1 = calcAge1(1993);
+//function expression
+const calcAge2 = function (birthYear) {
+  const extractingYear = new Date();
+  const year = extractingYear.getFullYear();
+  return year - birthYear;
+};
+const age2 = calcAge2(1999);
+console.log(age1, age2);
