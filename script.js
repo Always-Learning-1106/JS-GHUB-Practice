@@ -396,3 +396,16 @@ const calcAge2 = function (birthYear) {
 };
 const age2 = calcAge2(1999);
 console.log(age1, age2);
+const calcAge3 = (birthYear) => 2023 - birthYear;
+const age3 = calcAge3(1987);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, retirementAge) => {
+  const extractingYear = new Date();
+  const year = extractingYear.getFullYear();
+  const age = year - birthYear;
+  const retiring = retirementAge - age;
+  return retiring;
+};
+const yearsOfWorkLeft = yearsUntilRetirement(1983, 58);
+console.log(yearsOfWorkLeft);
