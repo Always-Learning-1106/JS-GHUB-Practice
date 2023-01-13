@@ -380,6 +380,7 @@ let newText = textList.join(" ");
 console.log(newText);
 */
 
+/*
 // function declaration
 function calcAge1(birthYear) {
   const extractingYear = new Date();
@@ -408,4 +409,35 @@ const yearsUntilRetirement = (birthYear, retirementAge) => {
   return retiring;
 };
 const yearsOfWorkLeft = yearsUntilRetirement(1983, 58);
+console.log(yearsOfWorkLeft);
+*/
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+  const juice = `Juice with ${applePieces} apple slices, and ${orangePieces} orange slices`;
+  return juice;
+}
+console.log(fruitProcessor(2, 3));
+
+const getFullYear = function () {
+  const extractingYear = new Date();
+  const year = extractingYear.getFullYear();
+  return year;
+};
+const getAge = function (birthYear) {
+  return getFullYear() - birthYear;
+};
+const desiredRetirementAge = function (getAge, retirmentAge) {
+  return retirmentAge - getAge;
+};
+const yearsUntilRetirement = (birthYear, retirementAge) => {
+  const retiring = desiredRetirementAge(getAge(birthYear), retirementAge);
+  return retiring;
+};
+const yearsOfWorkLeft = yearsUntilRetirement(getAge(40), 100);
 console.log(yearsOfWorkLeft);
