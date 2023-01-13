@@ -442,18 +442,18 @@ console.log(glennRetirement);
 // const yearsOfWorkLeft = yearsUntilRetirement(getAge(37), getRetirementAge(90));
 // console.log(yearsOfWorkLeft);
 */
-const dolphins = [44, 23, 71];
-const koalas = [65, 54, 49];
-// const dolphins = [85, 54, 41];
-// const koalas = [23, 34, 27];
+// const dolphins = [44, 23, 71];
+// const koalas = [65, 54, 49];
+/*
+const dolphins = [85, 54, 41];
+const koalas = [23, 34, 27];
 
 const calcAvg = (score1, score2, score3) => {
   return (score1 + score2 + score3) / 3;
 };
-
-const checkWinner = function () {
-  const dolphinAvg = calcAvg(dolphins[0], dolphins[1], dolphins[2]);
-  const koalaAvg = calcAvg(koalas[0], koalas[1], koalas[2]);
+const dolphinAvg = calcAvg(dolphins[0], dolphins[1], dolphins[2]);
+const koalaAvg = calcAvg(koalas[0], koalas[1], koalas[2]);
+const checkWinner = function (dolphinAvg, koalaAvg) {
   if (dolphinAvg / 2 >= koalaAvg) {
     return `The Dolphins win with a score of ${dolphinAvg} to the Koalas ${koalaAvg}`;
   } else if (koalaAvg / 2 >= dolphinAvg) {
@@ -462,5 +462,16 @@ const checkWinner = function () {
     return `No one wins`;
   }
 };
-console.log(checkWinner());
+console.log(checkWinner(200, 100));
 // in order for a team to win their average score must double their opponents average score
+*/
+const friends = ["mike", "sally", "julio", "bob"];
+//Add elements to array
+// friends.push("amanda");
+// friends.unshift();
+//remove elements from array
+// friends.pop();
+// friends.shift();
+// console.log(newLength);
+console.log(friends.indexOf("sally"));
+console.log(friends);
