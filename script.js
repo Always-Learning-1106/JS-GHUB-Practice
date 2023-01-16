@@ -465,13 +465,27 @@ const checkWinner = function (dolphinAvg, koalaAvg) {
 console.log(checkWinner(200, 100));
 // in order for a team to win their average score must double their opponents average score
 */
-const friends = ["mike", "sally", "julio", "bob"];
-//Add elements to array
-// friends.push("amanda");
-// friends.unshift();
-//remove elements from array
-// friends.pop();
-// friends.shift();
-// console.log(newLength);
-console.log(friends.indexOf("sally"));
-console.log(friends);
+
+// const friends = ["mike", "sally", "julio", "bob"];
+// //Add elements to array
+// // friends.push("amanda");
+// // friends.unshift();
+// //remove elements from array
+// // friends.pop();
+// // friends.shift();
+// // console.log(newLength);
+// console.log(friends.indexOf("sally"));
+// console.log(friends);
+const jonas = {
+  firstName: "jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+};
+
+console.log(jonas);
+console.log(jonas.lastName);
+const nameKey = "Name";
+console.log(jonas["lastName"]);
+console.log(jonas[`last${nameKey}`]);
