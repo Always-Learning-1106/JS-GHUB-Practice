@@ -476,6 +476,7 @@ console.log(checkWinner(200, 100));
 // // console.log(newLength);
 // console.log(friends.indexOf("sally"));
 // console.log(friends);
+/*
 const jonas = {
   firstName: "jonas",
   lastName: "Schmedtmann",
@@ -484,8 +485,34 @@ const jonas = {
   friends: ["Michael", "Peter", "Steven"],
 };
 
-console.log(jonas);
-console.log(jonas.lastName);
+// console.log(jonas);
+// console.log(jonas.lastName);
 const nameKey = "Name";
-console.log(jonas["lastName"]);
-console.log(jonas[`last${nameKey}`]);
+// console.log(jonas["lastName"]);
+// console.log(jonas[`last${nameKey}`]);
+
+const interestedIn = String(
+  prompt(
+    `what do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends`
+  )
+);
+
+const response = (reply) => {
+  if (reply === "firstName" || reply === "lastName") {
+    "firstName"
+      ? console.log(jonas[`first${nameKey}`])
+      : console.log(jonas[`last${nameKey}`]);
+  } else if (reply === "age") {
+    console.log(jonas["age"]);
+  } else if (reply === "job") {
+    console.log(jonas.job);
+  } else if (reply === "friends") {
+    console.log(jonas["friends"]);
+  } else {
+    console.log(`Please enter a legal value`);
+  }
+};
+
+response(interestedIn);
+//
+*/
