@@ -516,3 +516,19 @@ const response = (reply) => {
 response(interestedIn);
 //
 */
+const jonas = {
+  firstName: "Jonas",
+  lastName: "marley",
+  birthYear: 1991,
+  job: "Teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  getYear: Number(new Date().getFullYear()),
+  calcAge: function () {
+    return this.getYear - this.birthYear;
+  },
+};
+console.log(jonas.friends[0]);
+console.log(jonas["birthYear"]);
+console.log(jonas.calcAge());
