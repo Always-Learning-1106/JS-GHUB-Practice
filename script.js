@@ -516,6 +516,7 @@ const response = (reply) => {
 response(interestedIn);
 //
 */
+/*
 const jonas = {
   firstName: "Jonas",
   lastName: "marley",
@@ -550,3 +551,32 @@ console.log(
   } and ${jonas.licenseYesOrNo()} to drive`
 );
 // methods work for objects better than regular objects because they are reusable
+*/
+
+// const arr = [1, 2, 3, 4, 5];
+// const [x, c, v, b, t] = arr;
+// console.log(x, c, v, b, t);
+
+const restaurant = {
+  name: "Classico Italiano",
+  location: "Vivo st firenze italy",
+  categories: ["italian", "pizza", "veggies", "organic"],
+  starterMenu: ["garlic bread", "pasta", "chips", "watermelon"],
+  mainMenu: ["lasagna", "pizza", "pasta"],
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+};
+
+let [first, , , second] = restaurant.categories;
+console.log(first, second);
+[second, first] = [first, second];
+console.log(first, second);
+console.log(restaurant.order(0, 0));
+const [starter, main] = restaurant.order(1, 1);
+console.log(starter, main);
+
+const arr = [1, 2, [3, 4]];
+
+const [a, , [b, c]] = arr;
+console.log(a, c, b);
