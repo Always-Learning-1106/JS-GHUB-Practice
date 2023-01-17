@@ -608,8 +608,19 @@ const restaurant = {
       close: 24,
     },
   },
+  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+    console.log(
+      `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
+    );
+  },
 };
 
+restaurant.orderDelivery({
+  time: "22:30",
+  address: "via del sole, 21",
+  mainIndex: 2,
+  starterIndex: 2,
+});
 // for (let i = 0; i < flights.length; i++) {
 //   console.log(flights[i]);
 // }
@@ -650,5 +661,12 @@ const {
     sat: { open: open2, close: close2 }, //have to change name to access both fri and saturday because variables must have different names.
   },
 } = restaurant;
+
+const {
+  openingHours: {
+    thu: { open: open3, close: close3 },
+  },
+} = restaurant;
 console.log(restaurant.openingHours.sat);
 console.log(open2, close2);
+console.log(open3, close3);
