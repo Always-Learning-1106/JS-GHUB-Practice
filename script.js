@@ -524,7 +524,9 @@ const jonas = {
   friends: ["Michael", "Peter", "Steven"],
   hasDriversLicense: false,
   licenseYesOrNo: function () {
-    const licenseStatus = this.hasDriversLicense === true ? "a" : "no";
+    const licenseStatus = this.hasDriversLicense
+      ? "yes, jonas has a license"
+      : "no, jonas is living without a license";
     return licenseStatus;
   },
   getYear: Number(new Date().getFullYear()),
@@ -545,5 +547,6 @@ console.log(jonas.licenseYesOrNo());
 console.log(
   `${jonas.firstName} is a ${jonas.age} year old ${
     jonas["job"]
-  } and he has ${jonas.licenseYesOrNo()} drivers license`
+  } and ${jonas.licenseYesOrNo()} to drive`
 );
+// methods work for objects better than regular objects because they are reusable
