@@ -526,9 +526,10 @@ const jonas = {
 
   getYear: Number(new Date().getFullYear()),
   calcAge: function () {
-    return this.getYear - this.birthYear;
+    this.age = this.getYear - this.birthYear;
+    return this.age;
   },
 };
 console.log(jonas.friends[0]);
 console.log(jonas["birthYear"]);
-console.log(jonas.calcAge());
+console.log(jonas.age);
