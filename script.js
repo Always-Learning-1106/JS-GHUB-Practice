@@ -523,8 +523,9 @@ const jonas = {
   job: "Teacher",
   friends: ["Michael", "Peter", "Steven"],
   hasDriversLicense: true,
-
+  licenseYesOrNo: this.hasDriversLicense ? "a" : "no",
   getYear: Number(new Date().getFullYear()),
+
   calcAge: function () {
     this.age = this.getYear - this.birthYear;
     return this.age;
@@ -532,4 +533,12 @@ const jonas = {
 };
 console.log(jonas.friends[0]);
 console.log(jonas["birthYear"]);
-console.log(jonas.age);
+// console.log(jonas.calcAge());
+jonas.calcAge();
+// const description = () => {
+//   jonas.hasDriversLicense ? "a" : "no";
+// };
+console.log(jonas.licenseYesOrNo);
+// console.log(
+//   `${jonas.firstName} is a ${jonas.age} year old ${jonas["job"]} and he has ${jonas.licenseYesOrNo} drivers license`
+// );
