@@ -609,3 +609,30 @@ const restaurant = {
     },
   },
 };
+
+// for (let i = 0; i < flights.length; i++) {
+//   console.log(flights[i]);
+// }
+
+//When destructuring objects just use the name of the object exactly as it is named in the object you're taking it from and make sure to use brackets. Order of objects doesnt matter  like it does with arrays
+const { name, openingHours, categories } = restaurant;
+// console.log(name);
+// console.log(openingHours["thu"]);
+// console.log(categories[0]);
+
+///***********changing object names with destructurting and using default values*/
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+const { menu = [], starterMenu: starter = [] } = restaurant;
+console.log(menu, starter);
+/*MUTATING VARIABLES FROM AN ABJECT WHEN SOME VARIABLES IN CODE ABOVE ALREADY HAVE SAME NAME AS OBJECT VARIABLES*/
+let a = 111;
+let b = 124;
+const obj = { a: 23, b: 7, c: 19 };
+//here we are trying to change the value of a and b to the value in the object. so a = 111 we want a = 23 and b = 124 we want b = 7
+({ a, b } = obj); // must wrap it in shift+9 shift+0 braces
+console.log(a, b);
