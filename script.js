@@ -724,5 +724,8 @@ const rest2 = { name: "La piazza", owner: "Giovanni Rossi" };
 ///OR assignment operator with nullish assignment operator
 rest1.numGuests ??= 40;
 rest2.numGuests ||= 40;
+// and opertator in this short circuting will assign a value to a variable if it is currently truthy
+rest1.owner &&= "<ANONYMOUS>";
+rest2.owner &&= "<ANONYMOUS>";
 console.log(rest1);
 console.log(rest2);
