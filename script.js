@@ -813,3 +813,5 @@ console.log(game.odds);
 game.favorite();
 console.log(allPlayers);
 console.log(draw);
+team1 < team2 && console.log("team 1 is more likely to win");
+team1 > team2 && console.log("team 2 is more likely to win");
