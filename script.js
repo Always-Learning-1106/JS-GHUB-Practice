@@ -791,27 +791,41 @@ GOOD LUCK 😀
 
 // const players1 = [...game.players[0]];
 // const players2 = [...game.players[1]];
-const [players1, players2] = game.players;
-const [gk, ...fieldPlayers] = players1;
-console.log(gk, fieldPlayers);
-const allPlayers = [...players1, ...players2];
-const players1Final = [...players1, "Thiago", "Coutino", "Perisic"];
-// console.log(players1Final);
-const { team1, x: draw, team2 } = game.odds;
-const printGoals = function (...players) {
-  players.forEach((player, i) => {
-    i === 0
-      ? console.log(`${player} scored that makes ${i + 1} goal for the game`)
-      : console.log(`${player} scored that makes ${i + 1} goals for the game`);
-  });
-};
+// const [players1, players2] = game.players;
+// const [gk, ...fieldPlayers] = players1;
+// console.log(gk, fieldPlayers);
+// const allPlayers = [...players1, ...players2];
+// const players1Final = [...players1, "Thiago", "Coutino", "Perisic"];
+// // console.log(players1Final);
+// const { team1, x: draw, team2 } = game.odds;
+// const printGoals = function (...players) {
+//   players.forEach((player, i) => {
+//     i === 0
+//       ? console.log(`${player} scored that makes ${i + 1} goal for the game`)
+//       : console.log(`${player} scored that makes ${i + 1} goals for the game`);
+//   });
+// };
 
-console.log(team2);
+// console.log(team2);
 
-printGoals(...game.scored);
-console.log(game.odds);
-game.favorite();
-console.log(allPlayers);
-console.log(draw);
-team1 < team2 && console.log("team 1 is more likely to win");
-team1 > team2 && console.log("team 2 is more likely to win");
+// printGoals(...game.scored);
+// console.log(game.odds);
+// game.favorite();
+// console.log(allPlayers);
+// console.log(draw);
+// team1 < team2 && console.log("team 1 is more likely to win");
+// team1 > team2 && console.log("team 2 is more likely to win");
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+console.log(menu);
+for (let item of menu) {
+  console.log(item);
+}
+for (let item of menu.entries()) {
+  console.log(item);
+}
+console.log([...menu.entries()]);
+for (let [i, el] of menu.entries()) {
+  // let [index, menuItem] = item; /// same thing as putting the array brackets in for (***here***[i,el])
+  console.log(`${i + 1}: ${el} `);
+}
