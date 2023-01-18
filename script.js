@@ -698,9 +698,9 @@ const restaurant = {
     },
   },
   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
-    console.log(
-      `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
-    );
+    // console.log(
+    //   `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
+    // );
   },
 };
 
@@ -711,7 +711,18 @@ restaurant.orderDelivery({
   starterIndex: 2,
 });
 
-const hello = 0 || 18;
-console.log(hello);
-const goodbye = 0 && "glenn";
-console.log(goodbye);
+// let hello = 0 || 18;
+// console.log(hello);
+// hello = 0 ?? 19;
+// const goodbye = 0 && "glenn";
+// console.log(goodbye);
+const rest1 = { name: "Capri", numGuests: 0 };
+const rest2 = { name: "La piazza", owner: "Giovanni Rossi" };
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+///OR assignment operator with nullish assignment operator
+rest1.numGuests ??= 40;
+rest2.numGuests ||= 40;
+console.log(rest1);
+console.log(rest2);
