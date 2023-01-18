@@ -672,44 +672,44 @@ console.log(open2, close2);
 console.log(open3, close3);
 */
 
-const flights =
-  "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
+// const flights =
+//   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // Data needed for first part of the section
-const restaurant = {
-  name: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "Via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
-    // console.log(
-    //   `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
-    // );
-  },
-};
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
+//   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+//     // console.log(
+//     //   `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
+//     // );
+//   },
+// };
 
-restaurant.orderDelivery({
-  time: "22:30",
-  address: "via del sole, 21",
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// restaurant.orderDelivery({
+//   time: "22:30",
+//   address: "via del sole, 21",
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
 
 // let hello = 0 || 18;
 // console.log(hello);
@@ -730,51 +730,51 @@ restaurant.orderDelivery({
 // console.log(rest1);
 // console.log(rest2);
 
-const game = {
-  team1: "Bayern Munich",
-  team2: "Borrussia Dortmund",
-  players: [
-    [
-      "Neuer",
-      "Pavard",
-      "Martinez",
-      "Alaba",
-      "Davies",
-      "Kimmich",
-      "Goretzka",
-      "Coman",
-      "Muller",
-      "Gnarby",
-      "Lewandowski",
-    ],
-    [
-      "Burki",
-      "Schulz",
-      "Hummels",
-      "Akanji",
-      "Hakimi",
-      "Weigl",
-      "Witsel",
-      "Hazard",
-      "Brandt",
-      "Sancho",
-      "Gotze",
-    ],
-  ],
-  score: "4:0",
-  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels", "bob"],
-  date: "Nov 9th, 2037",
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-  favorite: function () {
-    this.odds.team1 < this.odds.team2
-      ? console.log(`team 1 is the favorite`)
-      : console.log(`team 2 is the favorite`);
-  },
-};
+// const game = {
+//   team1: "Bayern Munich",
+//   team2: "Borrussia Dortmund",
+//   players: [
+//     [
+//       "Neuer",
+//       "Pavard",
+//       "Martinez",
+//       "Alaba",
+//       "Davies",
+//       "Kimmich",
+//       "Goretzka",
+//       "Coman",
+//       "Muller",
+//       "Gnarby",
+//       "Lewandowski",
+//     ],
+//     [
+//       "Burki",
+//       "Schulz",
+//       "Hummels",
+//       "Akanji",
+//       "Hakimi",
+//       "Weigl",
+//       "Witsel",
+//       "Hazard",
+//       "Brandt",
+//       "Sancho",
+//       "Gotze",
+//     ],
+//   ],
+//   score: "4:0",
+//   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels", "bob"],
+//   date: "Nov 9th, 2037",
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+//   favorite: function () {
+//     this.odds.team1 < this.odds.team2
+//       ? console.log(`team 1 is the favorite`)
+//       : console.log(`team 2 is the favorite`);
+//   },
+// };
 /* 
 We're building a football betting app (soccer for my American friends 😅)!
 Suppose we get data from a web service about a certain game (below). In this challenge we're gonna work with the data. So here are your tasks:
@@ -815,17 +815,68 @@ GOOD LUCK 😀
 // console.log(draw);
 // team1 < team2 && console.log("team 1 is more likely to win");
 // team1 > team2 && console.log("team 2 is more likely to win");
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-console.log(menu);
-for (let item of menu) {
-  console.log(item);
-}
-for (let item of menu.entries()) {
-  console.log(item);
-}
-console.log([...menu.entries()]);
-for (let [i, el] of menu.entries()) {
-  // let [index, menuItem] = item; /// same thing as putting the array brackets in for (***here***[i,el])
-  console.log(`${i + 1}: ${el} `);
+// console.log(menu);
+// for (let item of menu) {
+//   console.log(item);
+// }
+// for (let item of menu.entries()) {
+//   console.log(item);
+// }
+// console.log([...menu.entries()]);
+// for (let [i, el] of menu.entries()) {
+//   // let [index, menuItem] = item; /// same thing as putting the array brackets in for (***here***[i,el])
+//   console.log(`${i + 1}: ${el} `);
+// }
+
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
+const restaurant = {
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  // es6 enhanced object literals************* don't need to write openingHours = openingHours inside objects
+  openingHours,
+
+  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+    // console.log(
+    //   `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
+    // );
+  },
+};
+
+restaurant.orderDelivery({
+  time: "22:30",
+  address: "via del sole, 21",
+  mainIndex: 2,
+  starterIndex: 2,
+});
+console.log(restaurant);
+
+// console.log(restaurant.openingHours?.tue?.open);
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+for (const day of days) {
+  const open = restaurant?.openingHours[day];
+  open &&
+    console.log(
+      `on ${day} we open at ${open?.open} and we close at ${open?.close}`
+    );
+
+  // restaurant.openingHours[day];
 }
