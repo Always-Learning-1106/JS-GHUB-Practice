@@ -583,6 +583,95 @@ console.log(a, c, b);
 */
 
 // Data needed for a later exercise
+// const flights =
+//   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
+
+// // Data needed for first part of the section
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "Via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
+//   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+//     console.log(
+//       `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
+//     );
+//   },
+// };
+
+// restaurant.orderDelivery({
+//   time: "22:30",
+//   address: "via del sole, 21",
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
+// for (let i = 0; i < flights.length; i++) {
+//   console.log(flights[i]);
+// }
+
+//When destructuring objects just use the name of the object exactly as it is named in the object you're taking it from and make sure to use brackets. Order of objects doesnt matter  like it does with arrays
+// const { name, openingHours, categories } = restaurant;
+// // console.log(name);
+// // console.log(openingHours["thu"]);
+// // console.log(categories[0]);
+
+// ///***********changing object names with destructurting and using default values*/
+// /*
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
+// const { menu = [], starterMenu: starter = [] } = restaurant;
+// console.log(menu, starter);
+// /*MUTATING VARIABLES FROM AN ABJECT WHEN SOME VARIABLES IN CODE ABOVE ALREADY HAVE SAME NAME AS OBJECT VARIABLES*/
+// let a = 111;
+// let b = 124;
+// const obj = { a: 23, b: 7, c: 19 };
+// //here we are trying to change the value of a and b to the value in the object. so a = 111 we want a = 23 and b = 124 we want b = 7
+// ({ a, b } = obj); // must wrap it in shift+9 shift+0 ()braces
+// console.log(a, b);
+/*
+const {
+  openingHours: {
+    fri: { open, close },
+  },
+} = restaurant;
+console.log(open, close);
+
+const {
+  openingHours: {
+    sat: { open: open2, close: close2 }, //have to change name to access both fri and saturday because variables must have different names.
+  },
+} = restaurant;
+
+const {
+  openingHours: {
+    thu: { open: open3, close: close3 },
+  },
+} = restaurant;
+console.log(restaurant.openingHours.sat);
+console.log(open2, close2);
+console.log(open3, close3);
+*/
+
 const flights =
   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
@@ -621,52 +710,8 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
-// for (let i = 0; i < flights.length; i++) {
-//   console.log(flights[i]);
-// }
 
-//When destructuring objects just use the name of the object exactly as it is named in the object you're taking it from and make sure to use brackets. Order of objects doesnt matter  like it does with arrays
-// const { name, openingHours, categories } = restaurant;
-// // console.log(name);
-// // console.log(openingHours["thu"]);
-// // console.log(categories[0]);
-
-// ///***********changing object names with destructurting and using default values*/
-// /*
-// const {
-//   name: restaurantName,
-//   openingHours: hours,
-//   categories: tags,
-// } = restaurant;
-// console.log(restaurantName, hours, tags);
-// const { menu = [], starterMenu: starter = [] } = restaurant;
-// console.log(menu, starter);
-// /*MUTATING VARIABLES FROM AN ABJECT WHEN SOME VARIABLES IN CODE ABOVE ALREADY HAVE SAME NAME AS OBJECT VARIABLES*/
-// let a = 111;
-// let b = 124;
-// const obj = { a: 23, b: 7, c: 19 };
-// //here we are trying to change the value of a and b to the value in the object. so a = 111 we want a = 23 and b = 124 we want b = 7
-// ({ a, b } = obj); // must wrap it in shift+9 shift+0 ()braces
-// console.log(a, b);
-
-const {
-  openingHours: {
-    fri: { open, close },
-  },
-} = restaurant;
-console.log(open, close);
-
-const {
-  openingHours: {
-    sat: { open: open2, close: close2 }, //have to change name to access both fri and saturday because variables must have different names.
-  },
-} = restaurant;
-
-const {
-  openingHours: {
-    thu: { open: open3, close: close3 },
-  },
-} = restaurant;
-console.log(restaurant.openingHours.sat);
-console.log(open2, close2);
-console.log(open3, close3);
+const hello = 0 || 18;
+console.log(hello);
+const goodbye = 0 && "glenn";
+console.log(goodbye);
