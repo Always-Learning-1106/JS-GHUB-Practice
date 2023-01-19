@@ -885,25 +885,25 @@ restaurant.orderDelivery({
 // const users = [{ name: "Hubert", email: "this@email.com" }];
 // console.log(users[0]?.name ?? `User array empty`);
 // console.log(users[0]?.watermelon ?? `User array empty`);
-const properties = Object.keys(openingHours);
-let openStr = `We are open on ${properties.length} days: `;
-for (const day of properties) {
-  openStr += `${day}, `;
-  // console.log(day);
-}
-// console.log(openStr);
+// const properties = Object.keys(openingHours);
+// let openStr = `We are open on ${properties.length} days: `;
+// for (const day of properties) {
+//   openStr += `${day}, `;
+//   // console.log(day);
+// }
+// // console.log(openStr);
 
-const values = Object.values(openingHours);
-// console.log(values);
+// const values = Object.values(openingHours);
+// // console.log(values);
 
-const entries = Object.entries(openingHours);
-// console.log(entries)
-for (const [key, value] of entries) {
-  console.log(key, value);
-}
-for (const [key, { open, close }] of entries) {
-  console.log(key, open, close);
-}
+// const entries = Object.entries(openingHours);
+// // console.log(entries)
+// for (const [key, value] of entries) {
+//   console.log(key, value);
+// }
+// for (const [key, { open, close }] of entries) {
+//   console.log(key, open, close);
+// }
 // output******************
 // thu {open: 12, close: 22}
 // fri {open: 11, close: 23}
@@ -911,3 +911,90 @@ for (const [key, { open, close }] of entries) {
 // thu 12 22
 // fri 11 23
 //sat 0 24
+const game = {
+  team1: "Bayern Munich",
+  team2: "Borrussia Dortmund",
+  players: [
+    [
+      "Neuer",
+      "Pavard",
+      "Martinez",
+      "Alaba",
+      "Davies",
+      "Kimmich",
+      "Goretzka",
+      "Coman",
+      "Muller",
+      "Gnarby",
+      "Lewandowski",
+    ],
+    [
+      "Burki",
+      "Schulz",
+      "Hummels",
+      "Akanji",
+      "Hakimi",
+      "Weigl",
+      "Witsel",
+      "Hazard",
+      "Brandt",
+      "Sancho",
+      "Gotze",
+    ],
+  ],
+  score: "4:0",
+  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+  date: "Nov 9th, 2037",
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+/* 
+Let's continue with our football betting app!
+1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+      Odd of victory Bayern Munich: 1.33
+      Odd of draw: 3.25
+      Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+      {
+        Gnarby: 1,
+        Hummels: 1,
+        Lewandowski: 2
+      }
+GOOD LUCK 😀
+*/
+const scored = Object.entries(game.scored);
+// console.log(scored);
+for (const [goal, player] of scored) {
+  console.log(`Goal ${Number(goal) + 1}: ${player}`);
+}
+const oddsAverage = Object.entries(game.odds);
+console.log(oddsAverage);
+let sum = 0;
+let average = "";
+for (const [team, odd] of oddsAverage) {
+  sum += Number(odd);
+  Number(average);
+  average = sum / oddsAverage.length;
+  if (team === "team1") {
+    console.log(`Odds of victory ${game.team1}: ${odd}`);
+  } else if (team === "x") {
+    console.log(`Odds of draw ${odd}`);
+  } else if (team === "team2") {
+    console.log(`Odds of victory ${game.team2} ${odd}`);
+  }
+  // console.log(`${player}${}`)
+}
+console.log(`The average odds for both teams plus the draw odds is ${average}`);
+const numGoals = Object.entries(game.scored);
+
+// console.log(numGoals);
+// const {
+//   game: { scored: goalAmount },
+// } = game["scored"];
+// console.log(goalAmount);
