@@ -830,43 +830,43 @@ GOOD LUCK 😀
 //   console.log(`${i + 1}: ${el} `);
 // }
 
-const openingHours = {
-  thu: {
-    open: 12,
-    close: 22,
-  },
-  fri: {
-    open: 11,
-    close: 23,
-  },
-  sat: {
-    open: 0, // Open 24 hours
-    close: 24,
-  },
-};
+// const openingHours = {
+//   thu: {
+//     open: 12,
+//     close: 22,
+//   },
+//   fri: {
+//     open: 11,
+//     close: 23,
+//   },
+//   sat: {
+//     open: 0, // Open 24 hours
+//     close: 24,
+//   },
+// };
 
-const restaurant = {
-  name: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
-  // es6 enhanced object literals************* don't need to write openingHours = openingHours inside objects
-  openingHours,
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "Via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+//   // es6 enhanced object literals************* don't need to write openingHours = openingHours inside objects
+//   openingHours,
 
-  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
-    // console.log(
-    //   `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
-    // );
-  },
-};
+//   orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+//     // console.log(
+//     //   `order received, ${this.mainMenu[mainIndex]} and ${this.starterMenu[starterIndex]} will be delivered at ${time} to ${address}`
+//     // );
+//   },
+// };
 
-restaurant.orderDelivery({
-  time: "22:30",
-  address: "via del sole, 21",
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// restaurant.orderDelivery({
+//   time: "22:30",
+//   address: "via del sole, 21",
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
 // console.log(restaurant);
 
 // console.log(restaurant.openingHours?.tue?.open);
@@ -911,46 +911,46 @@ restaurant.orderDelivery({
 // thu 12 22
 // fri 11 23
 //sat 0 24
-const game = {
-  team1: "Bayern Munich",
-  team2: "Borrussia Dortmund",
-  players: [
-    [
-      "Neuer",
-      "Pavard",
-      "Martinez",
-      "Alaba",
-      "Davies",
-      "Kimmich",
-      "Goretzka",
-      "Coman",
-      "Muller",
-      "Gnarby",
-      "Lewandowski",
-    ],
-    [
-      "Burki",
-      "Schulz",
-      "Hummels",
-      "Akanji",
-      "Hakimi",
-      "Weigl",
-      "Witsel",
-      "Hazard",
-      "Brandt",
-      "Sancho",
-      "Gotze",
-    ],
-  ],
-  score: "4:0",
-  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
-  date: "Nov 9th, 2037",
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: "Bayern Munich",
+//   team2: "Borrussia Dortmund",
+//   players: [
+//     [
+//       "Neuer",
+//       "Pavard",
+//       "Martinez",
+//       "Alaba",
+//       "Davies",
+//       "Kimmich",
+//       "Goretzka",
+//       "Coman",
+//       "Muller",
+//       "Gnarby",
+//       "Lewandowski",
+//     ],
+//     [
+//       "Burki",
+//       "Schulz",
+//       "Hummels",
+//       "Akanji",
+//       "Hakimi",
+//       "Weigl",
+//       "Witsel",
+//       "Hazard",
+//       "Brandt",
+//       "Sancho",
+//       "Gotze",
+//     ],
+//   ],
+//   score: "4:0",
+//   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+//   date: "Nov 9th, 2037",
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 /* 
 Let's continue with our football betting app!
 1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
@@ -968,6 +968,7 @@ BONUS: Create an object called 'scorers' which contains the names of the players
       }
 GOOD LUCK 😀
 */
+/*
 const scored = Object.entries(game.scored);
 // console.log(scored);
 for (const [goal, player] of scored) {
@@ -991,10 +992,46 @@ for (const [team, odd] of oddsAverage) {
   // console.log(`${player}${}`)
 }
 console.log(`The average odds for both teams plus the draw odds is ${average}`);
-const numGoals = Object.entries(game.scored);
-
+const arrays = Object.entries(game.scored);
+let goalsAdd = 0;
+// const playerCollection = [];
+// for (let [, two] of [...arrays]) {
+//   playerCollection.push(two);
+//   if (playerCollection.includes(two)) {
+//     console.log(`${two} with ${goalsAdd++} goals`);
+//   }
+// }
 // console.log(numGoals);
 // const {
 //   game: { scored: goalAmount },
 // } = game["scored"];
 // console.log(goalAmount);
+*/
+const ordersSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza",
+]);
+console.log(ordersSet);
+const myName = new Set("Glenn");
+console.log(myName);
+console.log(myName.size); // NOT LENGTH FOR SETS BUT SIZE ****************
+console.log(ordersSet.has("Pizza"));
+console.log(ordersSet.has("Glen"));
+ordersSet.add("Garlic Bread");
+ordersSet.add("Garlic Bread");
+ordersSet.delete("Risotto");
+// ordersSet.clear();
+console.log(ordersSet);
+for (const order of ordersSet) {
+  console.log(order);
+}
+// example to remove duplicate values of arrays
+const staff = ["waiter", "chef", "waiter", "manager", "chef", "waiter"];
+const staffUnique = new Set(staff);
+console.log(staffUnique);
+const staff2 = [...staffUnique];
+console.log(staff2);
