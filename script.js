@@ -873,6 +873,7 @@ console.log(restaurant);
 const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 for (const day of days) {
   const open = restaurant?.openingHours[day];
+  open ?? console.log(` on ${day} We are closed`);
   open &&
     console.log(
       `on ${day} we open at ${open?.open} and we close at ${open?.close}`
@@ -880,3 +881,7 @@ for (const day of days) {
 
   // restaurant.openingHours[day];
 }
+console.log(restaurant.orderRisotto?.(1, 4) ?? `method does not exist`);
+const users = [{ name: "Hubert", email: "this@email.com" }];
+console.log(users[0]?.name ?? `User array empty`);
+console.log(users[0]?.watermelon ?? `User array empty`);
