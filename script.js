@@ -1037,7 +1037,7 @@ console.log(staffUnique);
 const staff2 = [...staffUnique];
 console.log(staff2);
 */
-
+/*
 const rest = new Map();
 // rest.set("name", "Classico Italiano");
 // rest.set(1, "Firenze, Italy");
@@ -1061,7 +1061,53 @@ console.log(rest.has("categories"));
 const arr = [1, 2];
 rest.set(arr, "Test");
 rest.delete(2);
+rest.set(document.querySelector("h1"), "Heading");
 console.log(rest);
 console.log(rest.size);
 // rest.clear();
 console.log(rest.get(arr));
+*/
+
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+const question = new Map([
+  ["question", "what is the best programming language in the world?"],
+  [1, "JavaScript"],
+  [2, "C"],
+  [3, "Python"],
+  [4, "Typescript"],
+  ["correct", 1],
+  [true, "Correct!"],
+  [false, "Try again!"],
+]);
+console.log(openingHours);
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+console.log(question.get("question"));
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`${key}: ${value}`);
+}
+// const answer = Number(
+//   prompt(`Your answer
+// `)
+// );
+
+// if (answer === 1) {
+//   console.log(`You're right ${question.get(1)} is the best!`);
+// } else {
+//   console.log(`${question.get(false)}`);
+// }
+// console.log(question.get(question.get("correct") === answer));
+// 3;
