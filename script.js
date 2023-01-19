@@ -867,21 +867,47 @@ restaurant.orderDelivery({
   mainIndex: 2,
   starterIndex: 2,
 });
-console.log(restaurant);
+// console.log(restaurant);
 
 // console.log(restaurant.openingHours?.tue?.open);
-const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-for (const day of days) {
-  const open = restaurant?.openingHours[day];
-  open ?? console.log(` on ${day} We are closed`);
-  open &&
-    console.log(
-      `on ${day} we open at ${open?.open} and we close at ${open?.close}`
-    );
+// const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// for (const day of days) {
+//   const open = restaurant?.openingHours[day];
+//   open ?? console.log(`****on ${day} We are closed****`);
+//   open &&
+//     console.log(
+//       `on ${day} we open at ${open?.open} and we close at ${open?.close}`
+//     );
 
-  // restaurant.openingHours[day];
+//   // restaurant.openingHours[day];
+// }
+// console.log(restaurant.orderRisotto?.(1, 4) ?? `method does not exist`);
+// const users = [{ name: "Hubert", email: "this@email.com" }];
+// console.log(users[0]?.name ?? `User array empty`);
+// console.log(users[0]?.watermelon ?? `User array empty`);
+const properties = Object.keys(openingHours);
+let openStr = `We are open on ${properties.length} days: `;
+for (const day of properties) {
+  openStr += `${day}, `;
+  // console.log(day);
 }
-console.log(restaurant.orderRisotto?.(1, 4) ?? `method does not exist`);
-const users = [{ name: "Hubert", email: "this@email.com" }];
-console.log(users[0]?.name ?? `User array empty`);
-console.log(users[0]?.watermelon ?? `User array empty`);
+// console.log(openStr);
+
+const values = Object.values(openingHours);
+// console.log(values);
+
+const entries = Object.entries(openingHours);
+// console.log(entries)
+for (const [key, value] of entries) {
+  console.log(key, value);
+}
+for (const [key, { open, close }] of entries) {
+  console.log(key, open, close);
+}
+// output******************
+// thu {open: 12, close: 22}
+// fri {open: 11, close: 23}
+// sat {open: 0, close: 24}
+// thu 12 22
+// fri 11 23
+//sat 0 24
