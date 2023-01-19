@@ -1111,3 +1111,7 @@ for (const [key, value] of question) {
 // }
 // console.log(question.get(question.get("correct") === answer));
 // 3;
+// CONVERT MAP TO ARRAY***********************
+console.log(...question);
+console.log([...question.keys()]);
+console.log([...question.values()]);
