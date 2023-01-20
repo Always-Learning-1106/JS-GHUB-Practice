@@ -1161,36 +1161,69 @@ GOOD LUCK 😀
 // }
 const airline = "TAP Air Portugal";
 const plane = "A320";
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-console.log(plane[3]);
-console.log("B737"[0]);
-console.log(airline.length);
-console.log(airline.indexOf("r"));
-console.log(airline.lastIndexOf("r"));
-console.log(airline.indexOf("portugal"));
-console.log(airline.slice(0, 1));
-console.log(airline.slice(0, airline.indexOf(" ")));
-console.log(airline.slice(airline.lastIndexOf(" ") + 1));
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -2));
-
-const checkMiddleSeat = function (seat) {
-  const s = seat.slice(-1);
-  s === "B" || s === "E"
-    ? console.log(`You got the middle seat`)
-    : console.log(`you got lucky`);
-};
-checkMiddleSeat("11B");
-checkMiddleSeat("12C");
-checkMiddleSeat("34E");
-checkMiddleSeat("34A");
-
-console.log(airline.toUpperCase());
 console.log(airline.toLowerCase());
-const passenger = "JonAS";
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect =
-  passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+console.log(airline.toUpperCase());
+const passenger = "GlEnN";
+let passengerLower = passenger.toLowerCase();
+
+const email = "hello@jonas.io";
+const loginEmail = "  Hello@Jonas.Io \n";
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+// replacing parts of strings
+const priceGB = "288,97€";
+const priceUS = priceGB.replace("€", "$").replace(",", ".");
+console.log(priceUS);
+const announcement =
+  "All passengers come to boarding door 23. Boarding door 23";
+const fixedAnnouncement = announcement.replaceAll("door", "gate");
+console.log(fixedAnnouncement);
+const plane2 = "A320neo";
+console.log(plane2.includes("320"));
+console.log(plane2.includes("Boeing"));
+console.log(plane2.startsWith("A32"));
+console.log(plane2.endsWith("neo"));
+
+// const correctName = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// const correctName =
+//   passengerLower.charAt(0).toUpperCase() + passengerLower.slice(1);
+// console.log(correctName);
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log(plane[3]);
+// console.log("B737"[0]);
+// console.log(airline.length);
+// console.log(airline.indexOf("r"));
+// console.log(airline.lastIndexOf("r"));
+// console.log(airline.indexOf("portugal"));
+// console.log(airline.slice(0, 1));
+// console.log(airline.slice(0, airline.indexOf(" ")));
+// console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -2));
+
+// const checkMiddleSeat = function (seat) {
+//   const s = seat.slice(-1);
+//   s === "B" || s === "E"
+//     ? console.log(`You got the middle seat`)
+//     : console.log(`you got lucky`);
+// };
+// checkMiddleSeat("11B");
+// checkMiddleSeat("12C");
+// checkMiddleSeat("34E");
+// checkMiddleSeat("34A");
+
+// console.log(airline.toUpperCase());
+// console.log(airline.toLowerCase());
+// const passenger = "JonAS";
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
