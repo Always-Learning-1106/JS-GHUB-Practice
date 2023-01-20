@@ -1145,18 +1145,33 @@ Let's continue with our football betting app! This time, we have a map with a lo
       [FIRST HALF] 17: ⚽️ GOAL
 GOOD LUCK 😀
 */
-console.log(gameEvents.size);
-const events = [...new Set(gameEvents.values())];
-console.log(events);
-gameEvents.delete(64);
-console.log(gameEvents);
+// console.log(gameEvents.size);
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
+// gameEvents.delete(64);
+// console.log(gameEvents);
 
-const average = 90 / gameEvents.size;
+// const average = 90 / gameEvents.size;
 
-console.log(`An event happened, every ${average} minutes`);
-for (const [key, value] of [...gameEvents]) {
-  key <= 45
-    ? console.log(`[FIRST HALF] ${key}: ${value}`)
-    : console.log(`[SECOND HALF] ${key}: ${value}`);
-}
-// testing git push
+// console.log(`An event happened, every ${average} minutes`);
+// for (const [key, value] of [...gameEvents]) {
+//   key <= 45
+//     ? console.log(`[FIRST HALF] ${key}: ${value}`)
+//     : console.log(`[SECOND HALF] ${key}: ${value}`);
+// }
+const airline = "TAP Air Portugal";
+const plane = "A320";
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+console.log("B737"[0]);
+console.log(airline.length);
+console.log(airline.indexOf("r"));
+console.log(airline.lastIndexOf("r"));
+console.log(airline.indexOf("portugal"));
+console.log(airline.slice(0, 1));
+console.log(airline.slice(0, airline.indexOf(" ")));
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
