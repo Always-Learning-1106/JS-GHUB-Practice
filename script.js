@@ -1174,4 +1174,15 @@ console.log(airline.slice(0, 1));
 console.log(airline.slice(0, airline.indexOf(" ")));
 console.log(airline.slice(airline.lastIndexOf(" ") + 1));
 console.log(airline.slice(-2));
-console.log(airline.slice(1, -1));
+console.log(airline.slice(1, -2));
+
+const checkMiddleSeat = function (seat) {
+  const s = seat.slice(-1);
+  s === "B" || s === "E"
+    ? console.log(`You got the middle seat`)
+    : console.log(`you got lucky`);
+};
+checkMiddleSeat("11B");
+checkMiddleSeat("12C");
+checkMiddleSeat("34E");
+checkMiddleSeat("34A");
