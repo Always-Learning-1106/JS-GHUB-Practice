@@ -1123,19 +1123,19 @@ console.log([...question.values()]);
 // ];
 
 // console.log(recipes[2].publisher);
-const gameEvents = new Map([
-  [17, "⚽️ GOAL"],
-  [36, "🔁 Substitution"],
-  [47, "⚽️ GOAL"],
-  [61, "🔁 Substitution"],
-  [64, "🔶 Yellow card"],
-  [69, "🔴 Red card"],
-  [70, "🔁 Substitution"],
-  [72, "🔁 Substitution"],
-  [76, "⚽️ GOAL"],
-  [80, "⚽️ GOAL"],
-  [92, "🔶 Yellow card"],
-]);
+// const gameEvents = new Map([
+//   [17, "⚽️ GOAL"],
+//   [36, "🔁 Substitution"],
+//   [47, "⚽️ GOAL"],
+//   [61, "🔁 Substitution"],
+//   [64, "🔶 Yellow card"],
+//   [69, "🔴 Red card"],
+//   [70, "🔁 Substitution"],
+//   [72, "🔁 Substitution"],
+//   [76, "⚽️ GOAL"],
+//   [80, "⚽️ GOAL"],
+//   [92, "🔶 Yellow card"],
+// ]);
 /* 
 Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
 1. Create an array 'events' of the different game events that happened (no duplicates)
@@ -1159,35 +1159,35 @@ GOOD LUCK 😀
 //     ? console.log(`[FIRST HALF] ${key}: ${value}`)
 //     : console.log(`[SECOND HALF] ${key}: ${value}`);
 // }
-const airline = "TAP Air Portugal";
-const plane = "A320";
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
-const passenger = "GlEnN";
-let passengerLower = passenger.toLowerCase();
+// const airline = "TAP Air Portugal";
+// const plane = "A320";
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
+// const passenger = "GlEnN";
+// let passengerLower = passenger.toLowerCase();
 
-const email = "hello@jonas.io";
-const loginEmail = "  Hello@Jonas.Io \n";
-// const lowerEmail = loginEmail.toLowerCase();
-// const trimmedEmail = lowerEmail.trim();
-// console.log(trimmedEmail);
+// const email = "hello@jonas.io";
+// const loginEmail = "  Hello@Jonas.Io \n";
+// // const lowerEmail = loginEmail.toLowerCase();
+// // const trimmedEmail = lowerEmail.trim();
+// // console.log(trimmedEmail);
 
-const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+// console.log(normalizedEmail);
 
-// replacing parts of strings
-const priceGB = "288,97€";
-const priceUS = priceGB.replace("€", "$").replace(",", ".");
-console.log(priceUS);
-const announcement =
-  "All passengers come to boarding door 23. Boarding door 23";
-const fixedAnnouncement = announcement.replaceAll("door", "gate");
-console.log(fixedAnnouncement);
-const plane2 = "A320neo";
-console.log(plane2.includes("320"));
-console.log(plane2.includes("Boeing"));
-console.log(plane2.startsWith("A32"));
-console.log(plane2.endsWith("neo"));
+// // replacing parts of strings
+// const priceGB = "288,97€";
+// const priceUS = priceGB.replace("€", "$").replace(",", ".");
+// console.log(priceUS);
+// const announcement =
+//   "All passengers come to boarding door 23. Boarding door 23";
+// const fixedAnnouncement = announcement.replaceAll("door", "gate");
+// console.log(fixedAnnouncement);
+// const plane2 = "A320neo";
+// console.log(plane2.includes("320"));
+// console.log(plane2.includes("Boeing"));
+// console.log(plane2.startsWith("A32"));
+// console.log(plane2.endsWith("neo"));
 
 // const correctName = passengerLower[0].toUpperCase() + passengerLower.slice(1);
 // const correctName =
@@ -1227,3 +1227,23 @@ console.log(plane2.endsWith("neo"));
 // const passengerCorrect =
 //   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 // console.log(passengerCorrect);
+console.log("a+very+nice+string".split("+")); // split turns a string into elements of an array based on the dividing line chosen when called. here it is the + symbol
+const myName = "Glenn HotCheeks";
+console.log(myName.split(" "));
+const [firstName, lastName] = myName.split(" ");
+console.log(firstName, lastName);
+
+const capitalize = function (name = "John Doe") {
+  let lowerCase = name.toLowerCase();
+  let fixedArr = [];
+  let temp = "";
+
+  let split = lowerCase.split(" ");
+  for (let word of split) {
+    fixedArr.push(word[0].toUpperCase() + word.slice(1));
+    temp = fixedArr.join(" ");
+  }
+  return temp;
+};
+
+console.log(capitalize("yOu GotTa kEeP iT G raTEd!"));
