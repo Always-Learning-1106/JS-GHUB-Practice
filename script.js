@@ -1186,3 +1186,11 @@ checkMiddleSeat("11B");
 checkMiddleSeat("12C");
 checkMiddleSeat("34E");
 checkMiddleSeat("34A");
+
+console.log(airline.toUpperCase());
+console.log(airline.toLowerCase());
+const passenger = "JonAS";
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
