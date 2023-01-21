@@ -1344,19 +1344,31 @@ const book = tampaInternational.book;
 // console.log(euroWings);
 // book.call(euroWings, "Jenny", 6969);
 // console.log(euroWings);
-book.call(tampaInternational, "Gwen", 789456);
+// book.call(tampaInternational, "Gwen", 789456);
 // console.log(tampaInternational);
 const swiss = { name: "Swiss", iatoCode: "Suise", bookings: [] };
 // book.call(swiss, "Parker", 911);
 // console.log(swiss);
-//apply method takes array
-const flightData = ["Jayne", 555666];
-book.apply(swiss, flightData);
-book.call(swiss, ...flightData); ///SAME RESULT DIFFERENT APPROACH
-const bookEW = book.bind(euroWings);
-const bookSwiss = book.bind(swiss);
-const bookTampa = book.bind(tampaInternational);
+// //apply method takes array
+// const flightData = ["Jayne", 555666];
+// book.apply(swiss, flightData);
+// book.call(swiss, ...flightData); ///SAME RESULT DIFFERENT APPROACH
+// const bookEW = book.bind(euroWings);
+// const bookSwiss = book.bind(swiss);
+// const bookTampa = book.bind(tampaInternational);
 
-bookEW("Lauren", 6969);
-bookSwiss("Sarah", 4545);
-bookTampa("Maureen", 4321);
+// bookEW("Lauren", 6969);
+// bookSwiss("Sarah", 4545);
+// bookTampa("Maureen", 4321);
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+const addVAT = addTax.bind(null, 0.23);
+console.log(addVAT(450));
+
+const taxes = function (rate) {
+  return function (price) {
+    console.log(price * rate + price);
+  };
+};
+const salesTaxFl = taxes(0.075);
+salesTaxFl(220);
