@@ -1328,28 +1328,35 @@ GOOD LUCK 😀
 
 const tampaInternational = {
   name: "tpa",
-  iatoCode: 1234,
+  iatoCode: "TPA",
   bookings: [],
   book(name, flightNum) {
     console.log(`${name} booked a seat on flight ${this.iatoCode}${flightNum}`);
     this.bookings.push({ flight: `${this.iatoCode}${flightNum}`, name });
   },
 };
-tampaInternational.book("Glenn", 9876);
-tampaInternational.book("Bob", 555555);
-console.log(tampaInternational);
+// tampaInternational.book("Glenn", 9876);
+// tampaInternational.book("Bob", 555555);
+// console.log(tampaInternational);
 const euroWings = { name: "Euro Wings", iatoCode: "EW", bookings: [] };
 const book = tampaInternational.book;
 // euroWings.book("jenny", 6969);
 // console.log(euroWings);
-book.call(euroWings, "Jenny", 6969);
-console.log(euroWings);
+// book.call(euroWings, "Jenny", 6969);
+// console.log(euroWings);
 book.call(tampaInternational, "Gwen", 789456);
-console.log(tampaInternational);
+// console.log(tampaInternational);
 const swiss = { name: "Swiss", iatoCode: "Suise", bookings: [] };
-book.call(swiss, "Parker", 911);
-console.log(swiss);
+// book.call(swiss, "Parker", 911);
+// console.log(swiss);
 //apply method takes array
 const flightData = ["Jayne", 555666];
 book.apply(swiss, flightData);
 book.call(swiss, ...flightData); ///SAME RESULT DIFFERENT APPROACH
+const bookEW = book.bind(euroWings);
+const bookSwiss = book.bind(swiss);
+const bookTampa = book.bind(tampaInternational);
+
+bookEW("Lauren", 6969);
+bookSwiss("Sarah", 4545);
+bookTampa("Maureen", 4321);
