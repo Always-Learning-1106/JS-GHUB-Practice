@@ -1398,8 +1398,21 @@ BONUS TEST DATA 1: [5, 2, 3]
 BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 GOOD LUCK 😀
 */
-(function () {
-  console.log(`This will never run again`);
-})();
+// (function () {
+//   console.log(`This will never run again`);
+// })();
 
-(() => console.log(`this also will never run again`))();
+// (() => console.log(`this also will never run again`))();
+const secureBooking = function () {
+  let passengerCount = 0;
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+const booker = secureBooking();
+booker();
+// booker();
+// booker();
+// booker();
+// booker();
