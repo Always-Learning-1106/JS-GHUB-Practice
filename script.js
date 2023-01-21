@@ -1227,23 +1227,43 @@ GOOD LUCK 😀
 // const passengerCorrect =
 //   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 // console.log(passengerCorrect);
-console.log("a+very+nice+string".split("+")); // split turns a string into elements of an array based on the dividing line chosen when called. here it is the + symbol
-const myName = "Glenn HotCheeks";
-console.log(myName.split(" "));
-const [firstName, lastName] = myName.split(" ");
-console.log(firstName, lastName);
+// console.log("a+very+nice+string".split("+")); // split turns a string into elements of an array based on the dividing line chosen when called. here it is the + symbol
+// const myName = "Glenn HotCheeks";
+// console.log(myName.split(" "));
+// const [firstName, lastName] = myName.split(" ");
+// console.log(firstName, lastName);
 
-const capitalize = function (name = "John Doe") {
-  let lowerCase = name.toLowerCase();
-  let fixedArr = [];
-  let temp = "";
+// const capitalize = function (name = "John Doe") {
+//   let lowerCase = name.toLowerCase();
+//   let fixedArr = [];
+//   let fixedString = "";
 
-  let split = lowerCase.split(" ");
-  for (let word of split) {
-    fixedArr.push(word[0].toUpperCase() + word.slice(1));
-    temp = fixedArr.join(" ");
-  }
-  return temp;
+//   let split = lowerCase.split(" ");
+//   for (let word of split) {
+//     fixedArr.push(word[0].toUpperCase() + word.slice(1));
+//     fixedString = fixedArr.join(" ");
+//   }
+//   return fixedString;
+// };
+
+// console.log(capitalize("willy vEgaS"));
+const bookings = [];
+const createBooking = function (
+  flightNum = 1,
+  numPassengers = 1,
+  price = 199 * numPassengers
+) {
+  const booking = {
+    flightNum,
+    numPassengers,
+    price,
+  };
+
+  bookings.push(booking);
+  console.log(booking);
+  // return booking;
 };
-
-console.log(capitalize("yOu GotTa kEeP iT G raTEd!"));
+createBooking("1234");
+createBooking("LH123", 2);
+createBooking("LH123", 65);
+createBooking("LH123", undefined, 65); /// setting parameter to undefined to skip over it
