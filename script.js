@@ -1247,23 +1247,43 @@ GOOD LUCK 😀
 // };
 
 // console.log(capitalize("willy vEgaS"));
-const bookings = [];
-const createBooking = function (
-  flightNum = 1,
-  numPassengers = 1,
-  price = 199 * numPassengers
-) {
-  const booking = {
-    flightNum,
-    numPassengers,
-    price,
-  };
+// const bookings = [];
+// const createBooking = function (
+//   flightNum = 1,
+//   numPassengers = 1,
+//   price = 199 * numPassengers
+// ) {
+//   const booking = {
+//     flightNum,
+//     numPassengers,
+//     price,
+//   };
 
-  bookings.push(booking);
-  console.log(booking);
-  // return booking;
+//   bookings.push(booking);
+//   console.log(booking);
+//   // return booking;
+// };
+// createBooking("1234");
+// createBooking("LH123", 2);
+// createBooking("LH123", 65);
+// createBooking("LH123", undefined, 65); /// setting parameter to undefined to skip over it
+const flight = "LH234";
+const glenn = {
+  name: "Glenn E",
+  passport: 23436745,
 };
-createBooking("1234");
-createBooking("LH123", 2);
-createBooking("LH123", 65);
-createBooking("LH123", undefined, 65); /// setting parameter to undefined to skip over it
+
+const checkIn = function (flightNum, passenger) {
+  flightNum = "LH999";
+  passenger.name = "Mr. " + passenger.name;
+  if (passenger.passport === 23436745) {
+    alert("check In");
+  } else {
+    alert("Wrong Passport!");
+  }
+};
+
+checkIn(flight, glenn);
+console.log(flight);
+console.log(glenn);
+//pass by reference vs pass by value
