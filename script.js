@@ -1267,23 +1267,40 @@ GOOD LUCK 😀
 // createBooking("LH123", 2);
 // createBooking("LH123", 65);
 // createBooking("LH123", undefined, 65); /// setting parameter to undefined to skip over it
-const flight = "LH234";
-const glenn = {
-  name: "Glenn E",
-  passport: 23436745,
-};
+// const flight = "LH234";
+// const glenn = {
+//   name: "Glenn E",
+//   passport: 23436745,
+// };
 
-const checkIn = function (flightNum, passenger) {
-  flightNum = "LH999";
-  passenger.name = "Mr. " + passenger.name;
-  if (passenger.passport === 23436745) {
-    alert("check In");
-  } else {
-    alert("Wrong Passport!");
-  }
-};
+// const checkIn = function (flightNum, passenger) {
+//   flightNum = "LH999";
+//   passenger.name = "Mr. " + passenger.name;
+//   if (passenger.passport === 23436745) {
+//     alert("check In");
+//   } else {
+//     alert("Wrong Passport!");
+//   }
+// };
 
-checkIn(flight, glenn);
-console.log(flight);
-console.log(glenn);
+// checkIn(flight, glenn);
+// console.log(flight);
+// console.log(glenn);
 //pass by reference vs pass by value
+const oneWord = function (str) {
+  return str.replaceAll(" ", "").toLowerCase();
+};
+console.log(oneWord("glenn waLrus"));
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(" ");
+  return [first.toUpperCase(), ...others].join(" ");
+};
+console.log(upperFirstWord("hell cat was here"));
+
+///****************Higher order function */
+const transformer = function (str, fn) {
+  console.log(str);
+  console.log(`Transformed string: ${fn(str)}`);
+};
+transformer("javascript is the best", upperFirstWord);
