@@ -1306,22 +1306,41 @@ GOOD LUCK 😀
 // };
 // transformer("javascript is the best", upperFirstWord);
 // transformer("javascript is the best", oneWord);
-const greeting = function (greeting) {
-  return function (name) {
-    console.log(`${greeting} ${name}`);
-  };
-};
-const greeterHey = greeting("Hey");
-greeterHey("Glenn");
-greeterHey("bob");
-greeting("Hello")("Glenn");
+// const greeting = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+// const greeterHey = greeting("Hey");
+// greeterHey("Glenn");
+// greeterHey("bob");
+// greeting("Hello")("Glenn");
 
-const sayGoodBye = (good) => {
-  return function (bye) {
-    console.log(`${good} ${bye}`);
-  };
+// const sayGoodBye = (good) => {
+//   return function (bye) {
+//     console.log(`${good} ${bye}`);
+//   };
+// };
+// const adios = sayGoodBye("Good");
+// adios("bye");
+// adios("boy");
+// adios("girl");
+
+const tampaInternational = {
+  name: "tpa",
+  iatoCode: 1234,
+  bookings: [],
+  book(name, flightNum) {
+    console.log(`${name} booked a seat on flight ${this.iatoCode}${flightNum}`);
+    this.bookings.push({ flight: `${this.iatoCode}${flightNum}`, name });
+  },
 };
-const adios = sayGoodBye("Good");
-adios("bye");
-adios("boy");
-adios("girl");
+tampaInternational.book("Glenn", 9876);
+tampaInternational.book("Bob", 555555);
+console.log(tampaInternational);
+const euroWings = { name: "Euro Wings", iatoCode: "EW", bookings: [] };
+const book = tampaInternational.book;
+// euroWings.book("jenny", 6969);
+// console.log(euroWings);
+book.call(euroWings, "Jenny", 6969);
+console.log(euroWings);
