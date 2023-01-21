@@ -1286,21 +1286,42 @@ GOOD LUCK 😀
 // checkIn(flight, glenn);
 // console.log(flight);
 // console.log(glenn);
-//pass by reference vs pass by value
-const oneWord = function (str) {
-  return str.replaceAll(" ", "").toLowerCase();
-};
-console.log(oneWord("glenn waLrus"));
+// //pass by reference vs pass by value
+// const oneWord = function (str) {
+//   return str.replaceAll(" ", "").toLowerCase();
+// };
+// console.log(oneWord("glenn waLrus"));
 
-const upperFirstWord = function (str) {
-  const [first, ...others] = str.split(" ");
-  return [first.toUpperCase(), ...others].join(" ");
-};
-console.log(upperFirstWord("hell cat was here"));
+// const upperFirstWord = function (str) {
+//   const [first, ...others] = str.split(" ");
+//   return [first.toUpperCase(), ...others].join(" ");
+// };
+// console.log(upperFirstWord("hell cat was here"));
 
-///****************Higher order function */
-const transformer = function (str, fn) {
-  console.log(str);
-  console.log(`Transformed string: ${fn(str)}`);
+// ///****************Higher order function */
+// const transformer = function (str, fn) {
+//   console.log(str);
+//   console.log(`Transformed string: ${fn(str)}`);
+//   console.log(`transformed by ${fn.name}`);
+// };
+// transformer("javascript is the best", upperFirstWord);
+// transformer("javascript is the best", oneWord);
+const greeting = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
 };
-transformer("javascript is the best", upperFirstWord);
+const greeterHey = greeting("Hey");
+greeterHey("Glenn");
+greeterHey("bob");
+greeting("Hello")("Glenn");
+
+const sayGoodBye = (good) => {
+  return function (bye) {
+    console.log(`${good} ${bye}`);
+  };
+};
+const adios = sayGoodBye("Good");
+adios("bye");
+adios("boy");
+adios("girl");
