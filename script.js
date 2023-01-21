@@ -1344,3 +1344,12 @@ const book = tampaInternational.book;
 // console.log(euroWings);
 book.call(euroWings, "Jenny", 6969);
 console.log(euroWings);
+book.call(tampaInternational, "Gwen", 789456);
+console.log(tampaInternational);
+const swiss = { name: "Swiss", iatoCode: "Suise", bookings: [] };
+book.call(swiss, "Parker", 911);
+console.log(swiss);
+//apply method takes array
+const flightData = ["Jayne", 555666];
+book.apply(swiss, flightData);
+book.call(swiss, ...flightData); ///SAME RESULT DIFFERENT APPROACH
