@@ -1403,34 +1403,51 @@ GOOD LUCK 😀
 // })();
 
 // (() => console.log(`this also will never run again`))();
-const secureBooking = function () {
-  let passengerCount = 0;
-  return function () {
-    passengerCount++;
-    console.log(`${passengerCount} passengers`);
-  };
-};
-const booker = secureBooking();
-booker();
+// const secureBooking = function () {
+//   let passengerCount = 0;
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
+// const booker = secureBooking();
 // booker();
-// booker();
-// booker();
-// booker();
-let f;
-const g = function () {
-  const a = 23;
-  f = function () {
-    console.log(a * 2);
-  };
-};
+// // booker();
+// // booker();
+// // booker();
+// // booker();
+// let f;
+// const g = function () {
+//   const a = 23;
+//   f = function () {
+//     console.log(a * 2);
+//   };
+// };
 
-const h = function () {
-  let b = 777;
-  f = function () {
-    console.log(b * 2);
-  };
-};
-g();
-f();
-h();
-f();
+// const h = function () {
+//   let b = 777;
+//   f = function () {
+//     console.log(b * 2);
+//   };
+// };
+// g();
+// f();
+// h();
+// f();
+const currencies = new Map([
+  ["USD", "United States Dollar"],
+  ["EUR", "Euro"],
+  ["GBP", "Pound Sterling"],
+]);
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+let arr = ["a", "b", "c", "d", "e"];
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(1));
+// console.log(arr.slice(-2));
+// console.log(arr.slice(-1));
+// console.log(arr.slice(2, 3));
+// console.log(arr.splice(2));
+// console.log(arr.splice(-1));
+// console.log(arr.splice(3, 2));
+console.log(arr);
