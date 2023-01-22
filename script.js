@@ -1457,12 +1457,25 @@ const currencies = new Map([
 // const ar1ar2 = arr.concat(arr2);
 // console.log(ar1ar2);
 // console.log(ar1ar2.join("-")); // join turns arr into string
-const arr = [23, 11, 64, 12];
-console.log(arr[0]);
-console.log(arr.at(0));
-console.log(arr[arr.length - 1]); ///same
-console.log(arr.slice(-1).at(0)); //same
-console.log(arr.slice(-1)[0]); //same
-console.log(arr.at(-1)); //same
-console.log(arr["3"]);
-console.log(arr);
+// const arr = [23, 11, 64, 12];
+// console.log(arr[0]);
+// console.log(arr.at(0));
+// console.log(arr[arr.length - 1]); ///same
+// console.log(arr.slice(-1).at(0)); //same
+// console.log(arr.slice(-1)[0]); //same
+// console.log(arr.at(-1)); //same
+// console.log(arr["3"]);
+
+// console.log(arr);
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const forEach = movements.forEach((move, i) =>
+  move <= 0
+    ? console.log(`movement #${i + 1}: withdraw of $${move}`)
+    : console.log(`movement #${i + 1}: deposit of $${move}`)
+);
+console.log(`**********for of compared to forEach above`);
+for (const [i, transaction] of movements.entries()) {
+  transaction <= 0
+    ? console.log(`movement #${i + 1}: withdraw of $${transaction}`)
+    : console.log(`movement #${i + 1}: deposit of $${transaction}`);
+}
