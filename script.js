@@ -1442,12 +1442,19 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 let arr = ["a", "b", "c", "d", "e"];
+const arr2 = ["f", "g", "h", "i", "j"];
 // console.log(arr.slice(2, 4));
 // console.log(arr.slice(1));
 // console.log(arr.slice(-2));
 // console.log(arr.slice(-1));
 // console.log(arr.slice(2, 3));
 // console.log(arr.splice(2));
-// console.log(arr.splice(-1));
+// console.log(arr.splice(-1));// mutates original
 // console.log(arr.splice(3, 2));
+// console.log(arr.reverse());// mutates original
+// const [...reverse] = arr.sort();// mutates original
+// console.log(reverse);
+const ar1ar2 = arr.concat(arr2);
+console.log(ar1ar2);
+console.log(ar1ar2.join("-")); // join turns arr into string
 console.log(arr);
